@@ -1242,11 +1242,11 @@ Shopify.shopJsCdnBaseUrl = "https://cdn.shopify.com/shopifycloud/shop-js";</scri
 
 
 <script>
-  window.__webpack_public_path__ = "//#.com/cdn/shop/t/1936/assets/";
+  window.__webpack_public_path__ = "./css/";
 </script>
 
 <!-- Asset Tags: index: CSS -->
-  <link rel="stylesheet" href="css/vendors-91c40cd8.chunk.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="//#.com/cdn/shop/t/1936/assets/vendors-91c40cd8.chunk.css?v=133191522670560632901773685316"></noscript><link rel="stylesheet" href="css/4819.chunk.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="//#.com/cdn/shop/t/1936/assets/4819.chunk.css?v=4172975054495643631773685316"></noscript><link rel="stylesheet" href="css/4876.chunk.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="//#.com/cdn/shop/t/1936/assets/4876.chunk.css?v=104779753540785444261773685316"></noscript><link rel="stylesheet" href="css/layout.theme-bde52cb3.chunk.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="//#.com/cdn/shop/t/1936/assets/layout.theme-bde52cb3.chunk.css?v=93498885173385978531773685316"></noscript><link rel="stylesheet" href="css/layout.theme-2162c466.chunk.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="//#.com/cdn/shop/t/1936/assets/layout.theme-2162c466.chunk.css?v=155807952366837539511773819093"></noscript><link rel="stylesheet" href="css/1192.chunk.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="//#.com/cdn/shop/t/1936/assets/1192.chunk.css?v=103485757436151793781773685316"></noscript><link rel="stylesheet" href="css/3482.chunk.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="//#.com/cdn/shop/t/1936/assets/3482.chunk.css?v=104460679870468958421773685316"></noscript><link rel="stylesheet" href="css/1701.chunk.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="//#.com/cdn/shop/t/1936/assets/1701.chunk.css?v=59851783057104814101773830635"></noscript><link rel="stylesheet" href="css/template.index.chunk.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="//#.com/cdn/shop/t/1936/assets/template.index.chunk.css?v=165290995502466966291773830638"></noscript>
+  <link rel="stylesheet" href="css/vendors-91c40cd8.chunk.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="./css/vendors-91c40cd8.chunk.css?v=133191522670560632901773685316"></noscript><link rel="stylesheet" href="css/4819.chunk.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="./css/4819.chunk.css?v=4172975054495643631773685316"></noscript><link rel="stylesheet" href="css/4876.chunk.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="./css/4876.chunk.css?v=104779753540785444261773685316"></noscript><link rel="stylesheet" href="css/layout.theme-bde52cb3.chunk.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="./css/layout.theme-bde52cb3.chunk.css?v=93498885173385978531773685316"></noscript><link rel="stylesheet" href="css/layout.theme-2162c466.chunk.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="./css/layout.theme-2162c466.chunk.css?v=155807952366837539511773819093"></noscript><link rel="stylesheet" href="css/1192.chunk.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="./css/1192.chunk.css?v=103485757436151793781773685316"></noscript><link rel="stylesheet" href="css/3482.chunk.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="./css/3482.chunk.css?v=104460679870468958421773685316"></noscript><link rel="stylesheet" href="css/1701.chunk.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="./css/1701.chunk.css?v=59851783057104814101773830635"></noscript><link rel="stylesheet" href="css/template.index.chunk.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="./css/template.index.chunk.css?v=165290995502466966291773830638"></noscript>
 <!-- END Asset Tags: CSS -->
 
     <script>
@@ -2376,19 +2376,30 @@ Shopify.shopJsCdnBaseUrl = "https://cdn.shopify.com/shopifycloud/shop-js";</scri
 });
 </script><link rel="preconnect" crossorigin="anonymous" href="https://cdn9.forter.com"><link rel="preconnect" crossorigin="anonymous" href="https://3878ae04b02445659a3548fdf4dbab18-3fdbc400153f.cdn.forter.com"><link rel="preconnect" crossorigin="anonymous" href="https://cdn3.forter.com"><script src="js/dtag.js"></script>
 <style>
-  .header-item, .site-nav__link, .menu-drawer__menu-item {
-    color: #000000 !important; 
+  .site-navigation, 
+  .header-item--navigation, 
+  ul.site-nav {
+    display: flex !important;
     visibility: visible !important;
-    display: inline-block !important;
     opacity: 1 !important;
+    position: relative !important;
+    z-index: 999 !important;
+    margin-top: 20px !important;
+  }
+
+  .site-nav__link, 
+  .site-nav__link--main,
+  .header-item a {
+    color: #000000 !important; 
+    font-weight: bold !important;
+    padding: 10px 15px !important;
+    text-decoration: none !important;
     font-size: 14px !important;
-    text-transform: uppercase;
   }
-  .header-item--logo {
-    order: 2;
-  }
-  .header-item--navigation {
-    order: 1;
+
+  .critical-hide, .visually-hidden {
+    display: block !important;
+    visibility: visible !important;
   }
 </style>
 </head>
@@ -8106,7 +8117,7 @@ take our <b>shade finder quiz</b> to find <br>your perfect skin tint, concealer,
 
     
       <script async="" type="text/javascript" src="js/fwn_1.js"></script>
-      <fw-embed-feed channel="us_kylie_cosmetics" playlist="g1W0ZO" mode="row" open_in="default" player_placement="bottom-right" branding="false" ui_font_css="//#.com/cdn/shop/t/1936/assets/firework-font.css?v=31342339698074729861773685316"></fw-embed-feed>
+      <fw-embed-feed channel="us_kylie_cosmetics" playlist="g1W0ZO" mode="row" open_in="default" player_placement="bottom-right" branding="false" ui_font_css="./css/firework-font.css?v=31342339698074729861773685316"></fw-embed-feed>
 
     
   </div>
