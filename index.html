@@ -176,7 +176,10 @@
       <header class="layout__header" data-vue="header">
 
         
-<div class="site-header site-header--transparent-dark-text site-header--fixed">
+<div class="site-header site-header--transparent-dark-text site-header__mobile--transparent-dark-text" :class="{
+    'site-header--fixed': isHeaderFixed,
+    'site-header--active': searchActive,
+  }" >
   <div class="site-header__wrapper">
     <localization-form v-if="$mq.tabletWide" locale="BL"  inline-template="">
       <form method="post" action="/en-bl/localization" id="localization_form" accept-charset="UTF-8" class="form form--localization " enctype="multipart/form-data" ref="localizationForm"><input type="hidden" name="form_type" value="localization"><input type="hidden" name="utf8" value="✓"><input type="hidden" name="_method" value="put"><input type="hidden" name="return_to" value="/en-bl?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPNTY3MDY3MzQzMzUyNDI3AAGn5FBhG9bZAq7JyGW8eMoRaM1OI2Akvmx-MW847lJ-rB6cey_TJ12grxpKanw_aem_SCYjq7o5-4YCPI7Dxcgpug">
