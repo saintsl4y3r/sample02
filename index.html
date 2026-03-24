@@ -176,28 +176,24 @@
       <header class="layout__header" data-vue="header">
 
         
-<div class="site-header site-header--transparent-dark-text site-header__mobile--transparent-dark-text" :class="{
-    'site-header--fixed': isHeaderFixed,
-    'site-header--active': searchActive,
-  }" >
+<div class="site-header site-header--transparent-dark-text site-header--fixed site-header--active">
   <div class="site-header__wrapper">
-    <localization-form v-if="$mq.tabletWide" locale="BL"  inline-template="">
-      <form method="post" action="/en-bl/localization" id="localization_form" accept-charset="UTF-8" class="form form--localization " enctype="multipart/form-data" ref="localizationForm"><input type="hidden" name="form_type" value="localization"><input type="hidden" name="utf8" value="✓"><input type="hidden" name="_method" value="put"><input type="hidden" name="return_to" value="/en-bl?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPNTY3MDY3MzQzMzUyNDI3AAGn5FBhG9bZAq7JyGW8eMoRaM1OI2Akvmx-MW847lJ-rB6cey_TJ12grxpKanw_aem_SCYjq7o5-4YCPI7Dxcgpug">
-  <label for="LocalizationForm-Select">Shipping to:</label>
-  <div class="country-picker" tabindex="0">
-    <span class="country-picker__current">
-      BL
-      <span v-if="shoppingCountry.currency_symbol" class="country-picker__current--symbol" v-text="shoppingCountry.currency_symbol">
-        </span>
-    </span>
-    <select id="LocalizationForm-Select" class="country-picker__select" name="country_code" v-model="locale" @change="$emit('input', locale)">
-        <option v-for="country in countryList" :value="{
-            locale_url: country.locale_url,
-            country_code: country.country_code
-          }" :selected="country.country_code == 'BL'" v-text="`${country.country} ${country.language || ''} (${country.currency_iso_code} ${country.currency_symbol || ''})`">
-        </option>
-    </select>
+    <div class="localization-form" style="display: block;"> 
+      <form method="post" action="#" id="localization_form" class="form form--localization">
+        <label for="LocalizationForm-Select">Shipping to:</label>
+        <div class="country-picker">
+           <span class="country-picker__current">BL</span>
+        </div>
+      </form>
+    </div>
+
+    <div class="site-header__logo">
+      </div>
+
+    <div class="site-header__navigation" style="display: flex !important;">
+       </div>
   </div>
+</div>
 </form>
 
     </localization-form>
