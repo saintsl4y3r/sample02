@@ -152,9 +152,9 @@
     if (window.GLBE_PARAMS?.countryCode !== 'US' && window.GLBE_PARAMS?.countryCode !== 'DE' && window.Shopify.country !== 'GB') {
       document.body.classList.add('ge--true');
     }
-  </script><announcement-bar class="ge-hide" v-cloak="" :autoplay-speed="4000" :message-count="7" :enable-play-pause="true" inline-template=""><div v-if="!isHidden && !isInternational" id="announcement-bar" class="announcement-bar" role="region" style="background-color:#efd7e5;" aria-label="Announcements">
+  </script><announcement-bar class="ge-hide"  :autoplay-speed="4000" :message-count="7" :enable-play-pause="true" inline-template=""><div v-if="!isHidden && !isInternational" id="announcement-bar" class="announcement-bar" role="region" style="background-color:#efd7e5;" aria-label="Announcements">
       <div id="announcement-bar-messages" class="announcement-bar__messages" aria-live="off">
-        <transition name="fade" mode="out-in" v-cloak=""><div class="announcement-bar__message" key="message-0" v-if="activeMessage === 0" role="group" style="color:#393939;" aria-label="1 of 7" tabindex="0" ref="activeMessage"><b>💕 custom engraving on all cosmic bottles 💕</b> <a href="https://#.com/collections/kylie-fragrance"><b><u>shop now</u></b></a></div><div class="announcement-bar__message" key="message-1" v-if="activeMessage === 1" role="group" style="color:#393939;" aria-label="2 of 7" tabindex="0" ref="activeMessage" v-cloak=""><b>free accessory bundle ⭐ with 100ml+ cosmic purchase ⭐</b> <a href="https://#.com/collections/kylie-fragrance"><b><u>shop now</u></b></a></div><div class="announcement-bar__message" key="message-2" v-if="activeMessage === 2" role="group" style="color:#393939;" aria-label="3 of 7" tabindex="0" ref="activeMessage" v-cloak=""><b>just dropped 🍰 butter cake lip butter 🍰 </b> <a href="https://#.com/collections/kylie-cosmetics-new"><b><u>shop now</u></b></a></div><div class="announcement-bar__message" key="message-3" v-if="activeMessage === 3" role="group" style="color:#393939;" aria-label="4 of 7" tabindex="0" ref="activeMessage" v-cloak=""><b>fan-fave precision pout lip liners just got cooler 👄</b> <a href="https://#.com/collections/kylie-cosmetics-new"><b><u>shop now</u></b></a></div><div class="announcement-bar__message" key="message-4" v-if="activeMessage === 4" role="group" style="color:#393939;" aria-label="5 of 7" tabindex="0" ref="activeMessage" v-cloak=""><b>introducing the new lip sculpt & diffuse brush 10 🩷</b> <a href="https://#.com/collections/kylie-cosmetics-new"><b><u>shop now</u></b></a></div><div class="announcement-bar__message" key="message-5" v-if="activeMessage === 5" role="group" style="color:#393939;" aria-label="6 of 7" tabindex="0" ref="activeMessage" v-cloak="">Free U.S. Shipping with Orders Over $40</div><div class="announcement-bar__message" key="message-6" v-if="activeMessage === 6" role="group" style="color:#393939;" aria-label="7 of 7" tabindex="0" ref="activeMessage" v-cloak="">💖 Join <a href="https://#.com/pages/kylie-rewards"><b><u>Our Brand Rewards</u></b></a> and enjoy exclusive perks 💖</div></transition>
+        <transition name="fade" mode="out-in" ><div class="announcement-bar__message" key="message-0" v-if="activeMessage === 0" role="group" style="color:#393939;" aria-label="1 of 7" tabindex="0" ref="activeMessage"><b>💕 custom engraving on all cosmic bottles 💕</b> <a href="https://#.com/collections/kylie-fragrance"><b><u>shop now</u></b></a></div><div class="announcement-bar__message" key="message-1" v-if="activeMessage === 1" role="group" style="color:#393939;" aria-label="2 of 7" tabindex="0" ref="activeMessage" ><b>free accessory bundle ⭐ with 100ml+ cosmic purchase ⭐</b> <a href="https://#.com/collections/kylie-fragrance"><b><u>shop now</u></b></a></div><div class="announcement-bar__message" key="message-2" v-if="activeMessage === 2" role="group" style="color:#393939;" aria-label="3 of 7" tabindex="0" ref="activeMessage" ><b>just dropped 🍰 butter cake lip butter 🍰 </b> <a href="https://#.com/collections/kylie-cosmetics-new"><b><u>shop now</u></b></a></div><div class="announcement-bar__message" key="message-3" v-if="activeMessage === 3" role="group" style="color:#393939;" aria-label="4 of 7" tabindex="0" ref="activeMessage" ><b>fan-fave precision pout lip liners just got cooler 👄</b> <a href="https://#.com/collections/kylie-cosmetics-new"><b><u>shop now</u></b></a></div><div class="announcement-bar__message" key="message-4" v-if="activeMessage === 4" role="group" style="color:#393939;" aria-label="5 of 7" tabindex="0" ref="activeMessage" ><b>introducing the new lip sculpt & diffuse brush 10 🩷</b> <a href="https://#.com/collections/kylie-cosmetics-new"><b><u>shop now</u></b></a></div><div class="announcement-bar__message" key="message-5" v-if="activeMessage === 5" role="group" style="color:#393939;" aria-label="6 of 7" tabindex="0" ref="activeMessage" >Free U.S. Shipping with Orders Over $40</div><div class="announcement-bar__message" key="message-6" v-if="activeMessage === 6" role="group" style="color:#393939;" aria-label="7 of 7" tabindex="0" ref="activeMessage" >💖 Join <a href="https://#.com/pages/kylie-rewards"><b><u>Our Brand Rewards</u></b></a> and enjoy exclusive perks 💖</div></transition>
       </div><!-- Play Button -->
       <button type="button" class="announcement-bar__control announcement-bar__control--play" aria-label="Start slide rotation" v-if="isPaused" @click.prevent="playMessages" style="color: #383838;">
       <span class="sr-only">Start slide rotation</span>
@@ -176,12 +176,9 @@
       <header class="layout__header" data-vue="header">
 
         
-<div class="site-header site-header--transparent-dark-text site-header__mobile--transparent-dark-text" :class="{
-    'site-header--fixed': isHeaderFixed,
-    'site-header--active': searchActive,
-  }" v-cloak="">
+<div class="site-header site-header--transparent-dark-text site-header--fixed">
   <div class="site-header__wrapper">
-    <localization-form v-if="$mq.tabletWide" locale="BL" v-cloak="" inline-template="">
+    <localization-form v-if="$mq.tabletWide" locale="BL"  inline-template="">
       <form method="post" action="/en-bl/localization" id="localization_form" accept-charset="UTF-8" class="form form--localization " enctype="multipart/form-data" ref="localizationForm"><input type="hidden" name="form_type" value="localization"><input type="hidden" name="utf8" value="✓"><input type="hidden" name="_method" value="put"><input type="hidden" name="return_to" value="/en-bl?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPNTY3MDY3MzQzMzUyNDI3AAGn5FBhG9bZAq7JyGW8eMoRaM1OI2Akvmx-MW847lJ-rB6cey_TJ12grxpKanw_aem_SCYjq7o5-4YCPI7Dxcgpug">
   <label for="LocalizationForm-Select">Shipping to:</label>
   <div class="country-picker" tabindex="0">
@@ -213,7 +210,7 @@
     </div>
     <div class="site-header__navigation">
       <div class="site-header__menu site-header__menu--mobile">
-        <div id="shopify-section-header-menu--mobile" class="shopify-section"><transition name="flyout-left" v-cloak="">
+        <div id="shopify-section-header-menu--mobile" class="shopify-section"><transition name="flyout-left" >
   <flyout v-if="mainMenuActive" v-model="mainMenuActive" wrapper-id="main-menu-flyout" aria-role="dialog" aria-modal="true">
     <template #header="">
       <div class="flyout-mobile-left">
@@ -224,7 +221,7 @@
       </div>
       <div class="mobile-menu__utilities">
   <div class="mobile-menu__localization" data-vue="localization">
-    <localization-form locale="BL" v-cloak="" inline-template="">
+    <localization-form locale="BL"  inline-template="">
       <form method="post" action="/en-bl/localization" id="localization_form" accept-charset="UTF-8" class="form form--localization " enctype="multipart/form-data" ref="localizationForm"><input type="hidden" name="form_type" value="localization"><input type="hidden" name="utf8" value="✓"><input type="hidden" name="_method" value="put"><input type="hidden" name="return_to" value="/en-bl?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPNTY3MDY3MzQzMzUyNDI3AAGn5FBhG9bZAq7JyGW8eMoRaM1OI2Akvmx-MW847lJ-rB6cey_TJ12grxpKanw_aem_SCYjq7o5-4YCPI7Dxcgpug">
   <label for="LocalizationForm-Select">Shipping to:</label>
   <div class="country-picker" tabindex="0">
@@ -2937,7 +2934,7 @@ discover
     </div>
   </div>
   <transition name="fade">
-    <div v-if="searchActive" class="site-header__search" role="dialog" aria-modal="true" aria-live="assertive" v-cloak="">
+    <div v-if="searchActive" class="site-header__search" role="dialog" aria-modal="true" aria-live="assertive" >
       <instant-search inline-template="" :limit-terms="6" :limit-products="10" @close="toggleInstantSearch">
         <section role="dialog" aria-modal="true" aria-label="Search our site">
           <div class="site-header__search-top">
@@ -3063,9 +3060,9 @@ discover
   </transition>
 </div>
 <div id="shopify-section-mini-cart" class="shopify-section"><transition name="fade">
-  <div v-show="cartFlyoutActive" class="flyout-overlay" v-cloak=""></div>
+  <div v-show="cartFlyoutActive" class="flyout-overlay" ></div>
 </transition>
-<transition name="flyout-right" v-cloak="">
+<transition name="flyout-right" >
   <flyout v-if="cartFlyoutActive" v-model="cartFlyoutActive" class="flyout--cart" wrapper-id="mini-cart-flyout" aria-labelledby="mini-cart-heading" id="cart-flyout" aria-role="complementary">
     <template #header="">
       <button type="button" class="flyout__action flyout__action--close" aria-label="Close your bag" @click="cartFlyoutActive = false" v-focus="cartFlyoutActive"></button>
@@ -3079,7 +3076,7 @@ discover
       </a>
     </template>
     <template #body="">
-      <mini-cart :cart="cart" v-cloak="" inline-template="">
+      <mini-cart :cart="cart"  inline-template="">
         <div class="mini-cart">
           
           
@@ -7480,9 +7477,9 @@ cookie policy
 
       </footer><div data-vue="quick-view">
   <transition name="fade">
-    <div v-if="quickViewOpen" class="flyout-overlay" v-cloak=""></div>
+    <div v-if="quickViewOpen" class="flyout-overlay" ></div>
   </transition>
-  <transition :name="isMobile ? 'flyout-up' : 'flyout-right'" v-cloak="">
+  <transition :name="isMobile ? 'flyout-up' : 'flyout-right'" >
     <flyout v-if="quickViewOpen" v-model="quickViewOpen" class="flyout--quick-view" wrapper-id="quick-view-flyout" aria-role="dialog" aria-modal="true" :aria-label="product.title | escape">
       <template #header="">
         <button type="button" class="flyout__action flyout__action--close" aria-label="Close your bag" @click="closeQuickView" v-focus="quickViewOpen"></button>
@@ -7595,8 +7592,8 @@ document.addEventListener("keydown", e => {
 
 </script>
 
-<div data-vue="stock-notifications" v-cloak="">
-  <modal v-if="product" v-model="active" :class="'modal--notifications'" v-cloak="">
+<div data-vue="stock-notifications" >
+  <modal v-if="product" v-model="active" :class="'modal--notifications'" >
     <div class="stock-notifications">
       <button type="button" class="modal__close" aria-label="Close (esc)" @click="active = false">
         <span class="icon icon--close"></span>
@@ -7612,14 +7609,14 @@ document.addEventListener("keydown", e => {
 .stock-notifications .form__field .message {
   display:none;
 }
-</style><div data-vue="vto-modal" class="vto-modal" v-cloak="">
-  <modal v-model="active" class="vto-modal-wrapper" v-cloak="">
+</style><div data-vue="vto-modal" class="vto-modal" >
+  <modal v-model="active" class="vto-modal-wrapper" >
     <button type="button" class="modal__close" @click="closeModal">
       <span class="icon icon--close"></span>
     </button>
     <vto-modal v-if="active" api-key-test="iRKXFlmVq27u3jTMfcPbpazK4wVV8eRv5IKn4m7r" api-key-prod="0pZ2yOLMkgvy7iw87lCyBzgvbOKN1FKuzVsIS6q0">
   </vto-modal></modal>
-  <modal v-model="shadeFinderActive" class="shade-finder-modal-wrapper" :class="{ 'shade-finder__prepare-modal' : isPrepareModal }" v-cloak="">
+  <modal v-model="shadeFinderActive" class="shade-finder-modal-wrapper" :class="{ 'shade-finder__prepare-modal' : isPrepareModal }" >
     <button v-show="$mq.laptop || isPrepareModal" type="button" class="modal__close shade-finder-prep__modal-close" @click="closeModal">
       <span class="icon icon--close"></span>
     </button>
